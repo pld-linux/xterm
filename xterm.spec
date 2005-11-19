@@ -1,17 +1,17 @@
 Summary:	Terminal emulator for X
 Summary(pl):	Emulator terminala dla X
 Name:		xterm
-Version:	205
+Version:	207
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	5228ebbc1254f5b0a096d5b767c6fc88
+# Source0-md5:	3de8a3756c284a46a08c6d0308909486
 URL:		http://invisible-island.net/xterm/
-BuildRequires:	xorg-lib-libXft-devel
-BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	utempter-devel
+BuildRequires:	xorg-lib-libXaw-devel
+BuildRequires:	xorg-lib-libXft-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,6 +39,7 @@ sekwencji steruj±cych VT220.
 %configure \
 	--enable-256-color \
 	--enable-wide-chars \
+	--with-app-defaults=%{_libdir}/X11/app-defaults \
 	--with-utempter
 
 %{__make}
