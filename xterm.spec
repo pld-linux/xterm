@@ -1,17 +1,18 @@
 Summary:	Terminal emulator for X
 Summary(pl):	Emulator terminala dla X
 Name:		xterm
-Version:	207
+Version:	208
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	3de8a3756c284a46a08c6d0308909486
+# Source0-md5:	a062d0b398918015d07c31ecdcc5111a
 URL:		http://invisible-island.net/xterm/
 BuildRequires:	ncurses-devel
 BuildRequires:	utempter-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXft-devel
+Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -39,7 +40,7 @@ sekwencji steruj±cych VT220.
 %configure \
 	--enable-256-color \
 	--enable-wide-chars \
-	--with-app-defaults=%{_libdir}/X11/app-defaults \
+	--with-app-defaults=%{_datadir}/X11/app-defaults \
 	--with-utempter
 
 %{__make}
@@ -61,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/resize
 %attr(755,root,root) %{_bindir}/xterm
 %attr(755,root,root) %{_bindir}/uxterm
-%{_libdir}/X11/app-defaults/*
+%{_datadir}/X11/app-defaults/*
 %{_mandir}/man1/resize.1*
 %{_mandir}/man1/xterm.1*
 %{_mandir}/man1/uxterm.1*
