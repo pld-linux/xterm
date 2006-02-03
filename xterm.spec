@@ -7,6 +7,9 @@ License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
 # Source0-md5:	a062d0b398918015d07c31ecdcc5111a
+Source1:	XTerm.ad-pl
+Source2:	xterm.desktop
+Source3:	xterm.png
 URL:		http://invisible-island.net/xterm/
 BuildRequires:	ncurses-devel
 BuildRequires:	utempter-devel
@@ -53,6 +56,10 @@ rm -rf $RPM_BUILD_ROOT
 
 echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/man1/uxterm.1
 
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/X11/app-defaults/pl/XTerm
+install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/xterm.desktop
+install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/xterm.png
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -62,7 +69,14 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/resize
 %attr(755,root,root) %{_bindir}/xterm
 %attr(755,root,root) %{_bindir}/uxterm
-%{_datadir}/X11/app-defaults/*
+%{_datadir}/X11/app-defaults/UXTerm
+%{_datadir}/X11/app-defaults/XTerm
+%{_datadir}/X11/app-defaults/XTerm-color
+# XXX: which package this dir should belong to?
+%dir %{_datadir}/X11/app-defaults/pl
+%{_datadir}/X11/app-defaults/pl/XTerm
+%{_desktopdir}/xterm.desktop
+%{_pixmapsdir}/xterm.png
 %{_mandir}/man1/resize.1*
 %{_mandir}/man1/xterm.1*
 %{_mandir}/man1/uxterm.1*
