@@ -2,7 +2,7 @@ Summary:	Terminal emulator for X
 Summary(pl):	Emulator terminala dla X
 Name:		xterm
 Version:	208
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/man1/uxterm.1
 
-install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/X11/app-defaults/pl/XTerm
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/X11/pl/app-defaults/XTerm
 install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/xterm.desktop
 install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/xterm.png
 
@@ -73,8 +73,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/X11/app-defaults/XTerm
 %{_datadir}/X11/app-defaults/XTerm-color
 # XXX: which package this dir should belong to?
-%dir %{_datadir}/X11/app-defaults/pl
-%{_datadir}/X11/app-defaults/pl/XTerm
+%{_datadir}/X11/pl
 %{_desktopdir}/xterm.desktop
 %{_pixmapsdir}/xterm.png
 %{_mandir}/man1/resize.1*
