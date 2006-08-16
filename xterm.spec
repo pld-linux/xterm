@@ -46,7 +46,8 @@ sekwencji steruj±cych VT220.
 	--with-app-defaults=%{_datadir}/X11/app-defaults \
 	--with-utempter
 
-%{__make}
+%{__make} \
+	EXTRA_LOADFLAGS="-ltinfo"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -72,7 +73,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/X11/app-defaults/UXTerm
 %{_datadir}/X11/app-defaults/XTerm
 %{_datadir}/X11/app-defaults/XTerm-color
-%lang(pl) %{_datadir}/X11/pl/app-defaults/XTerm
 %{_desktopdir}/xterm.desktop
 %{_pixmapsdir}/xterm.png
 %{_mandir}/man1/resize.1*
