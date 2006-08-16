@@ -2,7 +2,7 @@ Summary:	Terminal emulator for X
 Summary(pl):	Emulator terminala dla X
 Name:		xterm
 Version:	215
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/man1/uxterm.1
 
-install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/X11/pl/app-defaults/XTerm
+install -D %{SOURCE1} XTerm.pl
 install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/xterm.desktop
 install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/xterm.png
 
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README README.i18n xterm.log.html
+%doc README README.i18n xterm.log.html XTerm.pl
 %attr(755,root,root) %{_bindir}/resize
 %attr(755,root,root) %{_bindir}/xterm
 %attr(755,root,root) %{_bindir}/uxterm
