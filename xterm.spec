@@ -57,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/man1/uxterm.1
 
-install -D %{SOURCE1} XTerm.pl
+install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/X11/pl/app-defaults/XTerm
 install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/xterm.desktop
 install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/xterm.png
 
@@ -66,13 +66,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README README.i18n xterm.log.html XTerm.pl
+%doc README README.i18n xterm.log.html
 %attr(755,root,root) %{_bindir}/resize
 %attr(755,root,root) %{_bindir}/xterm
 %attr(755,root,root) %{_bindir}/uxterm
 %{_datadir}/X11/app-defaults/UXTerm
 %{_datadir}/X11/app-defaults/XTerm
 %{_datadir}/X11/app-defaults/XTerm-color
+%lang(pl) %{_datadir}/X11/pl/app-defaults/XTerm
 %{_desktopdir}/xterm.desktop
 %{_pixmapsdir}/xterm.png
 %{_mandir}/man1/resize.1*
