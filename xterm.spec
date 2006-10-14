@@ -1,15 +1,16 @@
 Summary:	Terminal emulator for X
 Summary(pl):	Emulator terminala dla X
 Name:		xterm
-Version:	220
+Version:	221
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	e8272cb45c1d962033b77ac0b5053787
+# Source0-md5:	dbda54660a275225a418825742b9961f
 Source1:	XTerm.ad-pl
 Source2:	xterm.desktop
 Source3:	xterm.png
+Source4:	xterm.1x.ko
 URL:		http://invisible-island.net/xterm/
 BuildRequires:	ncurses-devel
 BuildRequires:	utempter-devel
@@ -60,6 +61,8 @@ echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/man1/uxterm.1
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/X11/pl/app-defaults/XTerm
 install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/xterm.desktop
 install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/xterm.png
+install -D %{SOURCE4} $RPM_BUILD_ROOT%{_mandir}/ko/man1/xterm.1
+echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/ko/man1/uxterm.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -79,3 +82,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/resize.1*
 %{_mandir}/man1/xterm.1*
 %{_mandir}/man1/uxterm.1*
+%lang(ko) %{_mandir}/ko/man1/xterm.1*
+%lang(ko) %{_mandir}/ko/man1/uxterm.1*
