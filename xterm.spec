@@ -1,16 +1,16 @@
 Summary:	Terminal emulator for X
 Summary(pl):	Emulator terminala dla X
 Name:		xterm
-Version:	221
+Version:	222
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	dbda54660a275225a418825742b9961f
+# Source0-md5:	bb77882a33083632a9c6c9de004a54fb
 Source1:	XTerm.ad-pl
-Source2:	xterm.desktop
-Source3:	xterm.png
-Source4:	xterm.1x.ko
+Source2:	%{name}.desktop
+Source3:	%{name}.png
+Source4:	%{name}.1x.ko
 URL:		http://invisible-island.net/xterm/
 BuildRequires:	ncurses-devel
 BuildRequires:	utempter-devel
