@@ -1,5 +1,5 @@
 Summary:	Terminal emulator for X
-Summary(pl.UTF-8):   Emulator terminala dla X
+Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
 Version:	224
 Release:	1
