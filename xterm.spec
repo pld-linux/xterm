@@ -1,5 +1,5 @@
 Summary:	Terminal emulator for X
-Summary(pl):	Emulator terminala dla X
+Summary(pl.UTF-8):   Emulator terminala dla X
 Name:		xterm
 Version:	223
 Release:	1
@@ -28,14 +28,14 @@ This version implements ISO/ANSI colors using the "new" color model
 (i.e., background color erase). It also implements most of the control
 sequences for VT220.
 
-%description -l pl
-Program xterm to emulator terminala dla X Window System. Udostêpnia
+%description -l pl.UTF-8
+Program xterm to emulator terminala dla X Window System. UdostÄ™pnia
 terminale zgodne z DEC VT102/VT220 (VTxxx) oraz Tektronix 4014 dla
-programów nie potrafi±cych u¿ywaæ bezpo¶rednio systemu okien.
+programÃ³w nie potrafiÄ…cych uÅ¼ywaÄ‡ bezpoÅ›rednio systemu okien.
 
-Ta wersja implementuje kolory ISO/ANSI przy u¿yciu "nowego" modelu
-kolorów (tzn. usuwania kolorem t³a). Implementuje tak¿e wiêkszo¶æ
-sekwencji steruj±cych VT220.
+Ta wersja implementuje kolory ISO/ANSI przy uÅ¼yciu "nowego" modelu
+kolorÃ³w (tzn. usuwania kolorem tÅ‚a). Implementuje takÅ¼e wiÄ™kszoÅ›Ä‡
+sekwencji sterujÄ…cych VT220.
 
 %prep
 %setup -q
