@@ -1,12 +1,12 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	224
+Version:	225
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	7e9f042873eb1927934d21733f9a2e1a
+# Source0-md5:	dbd31341a9ccb982647416e8d27b0f00
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
@@ -41,6 +41,7 @@ sekwencji sterujących VT220.
 %setup -q
 
 %build
+CPPFLAGS="-I/usr/include/ncurses"
 %configure \
 	--enable-256-color \
 	--enable-wide-chars \
