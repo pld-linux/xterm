@@ -1,12 +1,12 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	230
+Version:	231
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	c1a654a6793aff285b69c1d1ed4f2c38
+# Source0-md5:	b767d702e1464e16802b90c2187252c6
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
@@ -78,6 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/X11/app-defaults/UXTerm
 %{_datadir}/X11/app-defaults/XTerm
 %{_datadir}/X11/app-defaults/XTerm-color
+%{_datadir}/X11/app-defaults/KOI8RXTerm
 %lang(pl) %{_datadir}/X11/pl/app-defaults/XTerm
 %{_desktopdir}/xterm.desktop
 %{_pixmapsdir}/xterm.png
