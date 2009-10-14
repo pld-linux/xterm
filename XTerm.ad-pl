@@ -1,9 +1,8 @@
-
 *saveLines: 1024
 
 *SimpleMenu*BackingStore: NotUseful
 *SimpleMenu*menuLabel.font: -adobe-helvetica-bold-r-normal--*-120-*-*-*-*-iso8859-*
-*SimpleMenu*menuLabel.vertSpace: 	100
+*SimpleMenu*menuLabel.vertSpace:	100
 *SimpleMenu*HorizontalMargins: 16
 *SimpleMenu*Sme.height:	16
 
@@ -53,8 +52,8 @@
 *vtMenu*poponbell*Label:		Enable Pop on Bell
 *vtMenu*marginbell*Label:		W³±cz dzwonek marginesu
 *vtMenu*cursorblink*Label:		Enable Blinking Cursor
-*vtMenu*titeInhibit*Label:  Enable Alternate Screen Switching
-*vtMenu*activeicon*Label: Enable Active Icon
+*vtMenu*titeInhibit*Label:		Enable Alternate Screen Switching
+*vtMenu*activeicon*Label:		Enable Active Icon
 *vtMenu*softreset*Label:		Wykonaj miekki reset
 *vtMenu*hardreset*Label:		Wykonaj pe³ny reset
 *vtMenu*clearsavedlines*Label:		Reset i wyczyszcznie bufora terminala
@@ -126,7 +125,7 @@
 ! To know, why this works, see Xt documentation (appendix B).
 ! On some systems you may want to replace the a (alt) modifiers with
 ! m (meta) modifier in front of some <Key> events.
-*vt100.translations: #override \
+*VT100.Translations: #override \
 	Alt Ctrl<Btn4Down>: string(0x1b) string("OA")\n\
 	Alt Ctrl<Btn5Down>: string(0x1b) string("OB")\n\
 	Alt<Btn4Down>: string(0x1b) string("OA") string(0x1b) string("OA") string(0x1b) string("OA") string(0x1b) string("OA") string(0x1b) string("OA")\n\
@@ -304,7 +303,7 @@
 !			vt100/VT100
 !			tektronix/TopLevelShell
 !				shellext/VendorShellExt
-!					tek4014/Tek4014 
+!					tek4014/Tek4014
 !
 ! If built without a toolbar, the widget hierarchy is simpler, because there
 ! is no form, and the popup menu widgets are created only when they are first
@@ -319,7 +318,7 @@
 !		vt100/VT100
 !		tektronix/TopLevelShell
 !			shellext/VendorShellExt
-!				tek4014/Tek4014 
+!				tek4014/Tek4014
 !
 ! A more complete list of the widget/class names can be obtained using editres
 ! to dump a file.  Some widget names are not available until the corresponding
