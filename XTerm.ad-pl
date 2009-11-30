@@ -82,8 +82,8 @@
 
 !fontescape and fontsel overridden by application
 
-*fontMenu*font-linedrawing*Label:	Czcionka do rysowania linii
-*fontMenu*font-doublesize*Label:	Czcionka o podwójnym rozmiarze
+*fontMenu*font-linedrawing*Label:	Font do rysowania linii
+*fontMenu*font-doublesize*Label:	Font o podwójnym rozmiarze
 *fontMenu*font-loadable*Label:		Programowe fonty VT220
 *fontMenu*render-font*Label:		Fonty TrueType
 *fontMenu*utf8-mode*Label:		UTF-8
@@ -96,10 +96,10 @@
 *VT100.utf8Fonts.font6:	-misc-fixed-medium-r-normal--20-200-75-75-c-100-iso10646-1
 
 *tekMenu.Label:				Opcje terminala Tektronix
-*tekMenu*tektextlarge*Label:		Du¿a czcionka
-*tekMenu*tektext2*Label:		Rozmiar #2 czcionki
-*tekMenu*tektext3*Label:		Rozmiar #3 czcionki
-*tekMenu*tektextsmall*Label:		Ma³a czcionka
+*tekMenu*tektextlarge*Label:		Du¿y font
+*tekMenu*tektext2*Label:		Rozmiar #2 fontu
+*tekMenu*tektext3*Label:		Rozmiar #3 fontu
+*tekMenu*tektextsmall*Label:		Ma³y font
 *tekMenu*tekpage*Label:			PAGE
 *tekMenu*tekreset*Label:		RESET
 *tekMenu*tekcopy*Label:			COPY
