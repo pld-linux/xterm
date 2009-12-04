@@ -234,7 +234,7 @@
 	s<Key>F9: string(0x1b) string("[33~")\n\
 	s<Key>F10: string(0x1b) string("[34~")\n\
 
-*metaSendsEscape: true
+*eightBitInput: false
 
 ! If xterm is built with a toolbar, the widget hierarchy looks like this,
 ! showing widget name / class names.  The complete menu hierarchy is built
