@@ -13,6 +13,7 @@ Source3:	%{name}.png
 Source4:	%{name}.1x.ko
 URL:		http://invisible-island.net/xterm/
 BuildRequires:	ncurses-devel
+BuildRequires:	pkgconfig
 BuildRequires:	utempter-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXft-devel
