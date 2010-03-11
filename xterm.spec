@@ -42,7 +42,7 @@ sekwencji sterujących VT220.
 %setup -q
 
 %build
-CPPFLAGS="-I/usr/include/ncurses"
+CPPFLAGS="-I/usr/include/ncurses %{rpmcppflags}"
 %configure \
 	--enable-256-color \
 	--enable-wide-chars \
