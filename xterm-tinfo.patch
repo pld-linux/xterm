@@ -1,0 +1,30 @@
+--- xterm-261/aclocal.m4.orig	2010-06-14 23:44:02.000000000 +0200
++++ xterm-261/aclocal.m4	2010-07-10 07:42:39.153394253 +0200
+@@ -522,10 +522,10 @@
+ cf_save_LIBS="$LIBS"
+ cf_cv_lib_tgetent=no
+ if test "$cf_full_tgetent" = yes ; then
+-	cf_TERMLIB="termcap termlib ncurses curses"
++	cf_TERMLIB="tinfo ncurses curses termcap termlib"
+ 	cf_TERMTST="buffer[[0]] == 0"
+ else
+-	cf_TERMLIB="termlib ncurses curses"
++	cf_TERMLIB="tinfo ncurses curses termlib"
+ 	cf_TERMTST="0"
+ fi
+ for cf_termlib in '' $cf_TERMLIB ; do
+--- xterm-261/configure.orig	2010-06-16 00:50:26.000000000 +0200
++++ xterm-261/configure	2010-07-10 07:59:07.086654096 +0200
+@@ -5479,10 +5479,10 @@
+ cf_save_LIBS="$LIBS"
+ cf_cv_lib_tgetent=no
+ if test "$cf_full_tgetent" = yes ; then
+-	cf_TERMLIB="termcap termlib ncurses curses"
++	cf_TERMLIB="tinfo ncurses curses termcap termlib"
+ 	cf_TERMTST="buffer[0] == 0"
+ else
+-	cf_TERMLIB="termlib ncurses curses"
++	cf_TERMLIB="tinfo ncurses curses termlib"
+ 	cf_TERMTST="0"
+ fi
+ for cf_termlib in '' $cf_TERMLIB ; do

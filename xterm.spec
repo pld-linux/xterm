@@ -1,16 +1,17 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	253
+Version:	261
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	363cc4865b7691bd0ae5eebb42cde9c9
+# Source0-md5:	10d211f6986c4b279cfa9530b2361457
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
 Source4:	%{name}.1x.ko
+Patch0:		%{name}-tinfo.patch
 URL:		http://invisible-island.net/xterm/
 BuildRequires:	ncurses-devel
 BuildRequires:	pkgconfig
@@ -40,8 +41,10 @@ sekwencji sterujących VT220.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+# don't run autoconf, modified version of autoconf is required
 CPPFLAGS="-I/usr/include/ncurses %{rpmcppflags}"
 %configure \
 	--enable-256-color \
@@ -49,8 +52,7 @@ CPPFLAGS="-I/usr/include/ncurses %{rpmcppflags}"
 	--with-app-defaults=%{_datadir}/X11/app-defaults \
 	--with-utempter
 
-%{__make} \
-	EXTRA_LOADFLAGS="-ltinfo"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -77,9 +79,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/uxterm
 %attr(755,root,root) %{_bindir}/koi8rxterm
 %{_datadir}/X11/app-defaults/UXTerm
+%{_datadir}/X11/app-defaults/UXTerm-color
 %{_datadir}/X11/app-defaults/XTerm
 %{_datadir}/X11/app-defaults/XTerm-color
 %{_datadir}/X11/app-defaults/KOI8RXTerm
+%{_datadir}/X11/app-defaults/KOI8RXTerm-color
 %lang(pl) %{_datadir}/X11/pl/app-defaults/XTerm
 %{_desktopdir}/xterm.desktop
 %{_pixmapsdir}/xterm.png
