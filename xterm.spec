@@ -1,12 +1,23 @@
+# TODO:
+# Should we pack them ?
+#        /usr/share/pixmaps/filled-xterm_32x32.xpm
+#        /usr/share/pixmaps/filled-xterm_48x48.xpm
+#        /usr/share/pixmaps/mini.xterm_32x32.xpm
+#        /usr/share/pixmaps/mini.xterm_48x48.xpm
+#        /usr/share/pixmaps/xterm-color_32x32.xpm
+#        /usr/share/pixmaps/xterm-color_48x48.xpm
+#        /usr/share/pixmaps/xterm_32x32.xpm
+#        /usr/share/pixmaps/xterm_48x48.xpm
+
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	291
+Version:	292
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	9925cd564c84746442e640f0e32f0493
+# Source0-md5:	d6e7d1bd31b23fb58ca213c912f32009
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
