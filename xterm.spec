@@ -1,14 +1,3 @@
-# TODO:
-# Should we pack them ?
-#        /usr/share/pixmaps/filled-xterm_32x32.xpm
-#        /usr/share/pixmaps/filled-xterm_48x48.xpm
-#        /usr/share/pixmaps/mini.xterm_32x32.xpm
-#        /usr/share/pixmaps/mini.xterm_48x48.xpm
-#        /usr/share/pixmaps/xterm-color_32x32.xpm
-#        /usr/share/pixmaps/xterm-color_48x48.xpm
-#        /usr/share/pixmaps/xterm_32x32.xpm
-#        /usr/share/pixmaps/xterm_48x48.xpm
-
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
@@ -78,6 +67,9 @@ install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/xterm.desktop
 install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/xterm.png
 install -D %{SOURCE4} $RPM_BUILD_ROOT%{_mandir}/ko/man1/xterm.1
 echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/ko/man1/uxterm.1
+
+# cleanup unpackaged icons
+%{__rm} $RPM_BUILD_ROOT%{_pixmapsdir}/{filled-xterm,mini.xterm,xterm-color,xterm}_*x*.xpm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
