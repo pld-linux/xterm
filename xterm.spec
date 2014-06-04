@@ -1,12 +1,12 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	304
+Version:	306
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	8a9460d848cf4ed244fcfc9b07d1c3d0
+# Source0-md5:	4ec3183d153087aee9cc20f90acdf2f6
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
@@ -62,6 +62,8 @@ rm -rf $RPM_BUILD_ROOT
 
 echo '.so xterm.1' > $RPM_BUILD_ROOT%{_mandir}/man1/uxterm.1
 
+install -D xterm.appdata.xml $RPM_BUILD_ROOT%{_datadir}/appdata/xterm.appdata.xml
+
 install -D %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/X11/pl/app-defaults/XTerm
 install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/xterm.desktop
 install -D %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/xterm.png
@@ -88,6 +90,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/X11/app-defaults/KOI8RXTerm
 %{_datadir}/X11/app-defaults/KOI8RXTerm-color
 %lang(pl) %{_datadir}/X11/pl/app-defaults/XTerm
+%{_datadir}/appdata/xterm.appdata.xml
 %{_desktopdir}/xterm.desktop
 %{_pixmapsdir}/xterm.png
 %{_mandir}/man1/resize.1*
