@@ -1,23 +1,29 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	312
-Release:	3
+Version:	315
+Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	ftp://invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	e42f09b2f59efa862367967241d56306
+# Source0-md5:	20306ba59f6d8e810d718153f8427bdf
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
 Source4:	%{name}.1x.ko
 Patch0:		%{name}-tinfo.patch
 URL:		http://invisible-island.net/xterm/
+BuildRequires:	fontconfig-devel
 BuildRequires:	libutempter-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	pkgconfig
+BuildRequires:	xorg-lib-libICE-devel
 BuildRequires:	xorg-lib-libXaw-devel
 BuildRequires:	xorg-lib-libXft-devel
+BuildRequires:	xorg-lib-libXinerama-devel
+BuildRequires:	xorg-lib-libXmu-devel
+BuildRequires:	xorg-lib-libXpm-devel
+BuildRequires:	xorg-lib-libXt-devel >= 1.0.0
 Requires:	xorg-lib-libXt >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
