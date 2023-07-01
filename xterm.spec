@@ -1,24 +1,26 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	367
+Version:	383
 Release:	1
 License:	MIT
 Group:		X11/Applications
-Source0:	ftp://ftp.invisible-island.net/xterm/%{name}-%{version}.tgz
-# Source0-md5:	a6ed592b9c5d38cfd4a4dd37d97e5a12
+Source0:	https://invisible-island.net/archives/xterm/%{name}-%{version}.tgz
+# Source0-md5:	a8a6db76a763d4c1e35d1d8daf57701f
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
 Source4:	%{name}.1x.ko
-Patch0:		%{name}-tinfo.patch
-URL:		http://invisible-island.net/xterm/
+URL:		https://invisible-island.net/xterm/
 BuildRequires:	fontconfig-devel
+BuildRequires:	freetype-devel >= 2
 BuildRequires:	libutempter-devel
 BuildRequires:	ncurses-devel
 BuildRequires:	pkgconfig
 BuildRequires:	xorg-lib-libICE-devel
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-lib-libXaw-devel
+BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXft-devel
 BuildRequires:	xorg-lib-libXinerama-devel
 BuildRequires:	xorg-lib-libXmu-devel
@@ -47,17 +49,13 @@ sekwencji sterujących VT220.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 # don't run autoconf, modified version of autoconf is required
 CPPFLAGS="-I/usr/include/ncurses %{rpmcppflags}"
-# consider --enable-readline-mouse --enable-dabbrev --enable-screen-dumps --enable-regis-graphics
+# consider --enable-dabbrev --enable-regis-graphics
 %configure \
-	--enable-256-color \
 	--enable-exec-xterm \
-	--enable-wide-chars \
-	--enable-sixel-graphics \
 	--with-app-defaults=%{_datadir}/X11/app-defaults \
 	--with-utempter
 
