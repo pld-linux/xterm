@@ -1,12 +1,12 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	383
+Version:	389
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://invisible-island.net/archives/xterm/%{name}-%{version}.tgz
-# Source0-md5:	a8a6db76a763d4c1e35d1d8daf57701f
+# Source0-md5:	a79c213f5541b70e30b8a2445c5e6bd8
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
@@ -53,7 +53,10 @@ sekwencji sterujących VT220.
 %build
 # don't run autoconf, modified version of autoconf is required
 CPPFLAGS="-I/usr/include/ncurses %{rpmcppflags}"
-# consider --enable-dabbrev --enable-regis-graphics
+# consider:
+# --enable-dabbrev
+# --enable-dec-locator
+# --enable-regis-graphics
 %configure \
 	--enable-exec-xterm \
 	--with-app-defaults=%{_datadir}/X11/app-defaults \
