@@ -1,12 +1,12 @@
 Summary:	Terminal emulator for X
 Summary(pl.UTF-8):	Emulator terminala dla X
 Name:		xterm
-Version:	397
+Version:	400
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://invisible-island.net/archives/xterm/%{name}-%{version}.tgz
-# Source0-md5:	f8bffb37b6dcbb9757c2a8f7484e5085
+# Source0-md5:	a60f7950e38d16d7fc0e8cf80070354b
 Source1:	XTerm.ad-pl
 Source2:	%{name}.desktop
 Source3:	%{name}.png
